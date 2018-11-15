@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data JS Test</title>
+</head>
+<body>
+	<!-- <script type="text/javascript" src="data.js"/> -->
+	<script type="text/javascript">
+		var dataArray = [
+    {
+        "id": 1,
+        "firstName": "varun",
+        "lastName": "waste fellow",
+        "gender": "male",
+        "address": "lb nagar",
+        "city": "hyderabad",
+        "state": {
+            "abbreviation": "TS",
+            "name": "Telangana"
+        },
+        "orders": [
+            {
+                "productName": "Basketball",
+                "itemCost": 7.99
+            },
+            {
+                "productName": "Shoes",
+                "itemCost": 199.99
+            }
+        ],
+        "latitude": 17.3457176,
+        "longitude": 78.55222959999992
+    },
+    {
+        "id": 2,
+        "firstName": "venugopal",
+        "lastName": "waste fellow1",
+        "gender": "male",
+        "address": "ecil",
+        "city": "hyderabad",
+        "state": {
+            "abbreviation": "Ts",
+            "name": "Telangana"
+        },
+        "orders": [
+            {
+                "productName": "Frisbee",
+                "itemCost": 2.99
+            },
+            {
+                "productName": "Hat",
+                "itemCost": 6
+            }
+        ],
+        "latitude": 17.469093,
+        "longitude": 78.57727669999997
+    }
+]
+
+		var completeArray = [];
+		var tempObj = {};
+		var firstNameArray = [];
+		
+		dataArray.map(function(item){
+			//console.log("item: "+item.firstName);
+			firstNameArray.push(item.firstName);
+		});
+		console.log("firstNameArray: "+firstNameArray);
+
+		var lastNameArray = [];
+
+		dataArray.filter(function(item1){
+			//console.log("item1 :"+item1.lastName);
+			lastNameArray.push(item1.lastName);
+		}); 
+
+		//obj.push(firstNameArray);
+		//obj.push(lastNameArray);
+
+		dataArray.map(function(item){
+			console.log(" completeArray item.firstName: "+item.firstName);
+			console.log(" completeArray item.lastName: "+item.lastName);
+
+			firstNameArray.push(item.firstName);
+			//completeArray.push({firstName:item.firstName});
+			//completeArray.push({"firstName",item.firstName});
+			tempObj.assign(firstName:item.firstName);
+
+			lastNameArray.push(item.lastName);
+			//completeArray.push({"lastName",item.lastName});
+			tempObj.assign(tempObj,lastName:item.firstName );
+		});
+
+		for(var i=0;i<data.){
+
+		}
+		//console.log("obj: "+obj);
+		//console.log("completeArray: "+completeArray);
+		console.log("tempObj: "+tempObj);
+	</script>
+	<form name="customerOrders">
+		<table border="1" name="ordersTable">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Item Cost</th>
+					<th>Total Cost</th>
+				</tr>				
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>
